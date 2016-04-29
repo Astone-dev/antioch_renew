@@ -1,7 +1,7 @@
 application: antiochwp-a
 version: wpproject
 runtime: php55
-api_version: 99
+api_version: 0.77
 
 handlers:
 - url: /(.*\.(htm|html|css|js))$
