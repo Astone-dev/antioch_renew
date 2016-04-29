@@ -43,11 +43,12 @@ handlers:
   script: wordpress/wp-cron.php
   login: admin
 
-# スマホアプリなどの管理画面アクセス
+# 繧ｹ繝槭�帙い繝励Μ縺ｪ縺ｩ縺ｮ邂｡逅�逕ｻ髱｢繧｢繧ｯ繧ｻ繧ｹ
 - url: /xmlrpc.php
-#デフォルト  script: wordpress/xmlrpc.php
-#  redirect4dos.html 経由でリダイレクトさせてアクセス不許可
-static_files: redirect4dos.html
+# script: wordpress/xmlrpc.php
+# redirect4dos.html 邨檎罰縺ｧ繝ｪ繝繧､繝ｬ繧ｯ繝医＆縺帙※繧｢繧ｯ繧ｻ繧ｹ荳崎ｨｱ蜿ｯ
+  upload: redirect4dos.html
+  static_files: redirect4dos.html
 
 
 - url: /wp-(.+).php
