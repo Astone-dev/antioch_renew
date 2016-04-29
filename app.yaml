@@ -27,17 +27,17 @@ handlers:
 - url: /wp-admin/(.+)
   script: wordpress/wp-admin/\1
   secure: always
-  login: required
+  login: admin
 
 - url: /wp-admin/
   script: wordpress/wp-admin/index.php
   secure: always
-  login: required
+  login: admin
 
 - url: /wp-login.php
   script: wordpress/wp-login.php
   secure: always
-  login: required
+  login: admin
 
 - url: /wp-cron.php
   script: wordpress/wp-cron.php
