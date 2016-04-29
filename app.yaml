@@ -43,8 +43,12 @@ handlers:
   script: wordpress/wp-cron.php
   login: admin
 
+# スマホアプリなどの管理画面アクセス
 - url: /xmlrpc.php
-  script: wordpress/xmlrpc.php
+#デフォルト  script: wordpress/xmlrpc.php
+#  redirect4dos.html 経由でリダイレクトさせてアクセス不許可
+static_files: redirect4dos.html
+
 
 - url: /wp-(.+).php
   script: wordpress/wp-\1.php
