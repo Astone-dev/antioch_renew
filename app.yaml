@@ -1,10 +1,16 @@
 application: antiochwp-a
-version: wpproject-test
+version: wpproject
 runtime: php55
-api_version: 0.77.1
+api_version: 0.77.2
 threadsafe: true
 
 handlers:
+# Google 認証（一時使用）
+- url: /googlef107807b8271d221.html
+  upload: googlef107807b8271d221.html
+  static_files: googlef107807b8271d221.html
+  application_readable: true
+
 - url: /(.*\.(htm|html|css|js))$
   static_files: wordpress/\1
   upload: wordpress/.*\.(htm|html|css|js)$
@@ -50,7 +56,6 @@ handlers:
 # redirect4dos.html 経由でリダイレクトさせてアクセス不許可
   upload: redirect4dos.html
   static_files: redirect4dos.html
-
 
 - url: /wp-(.+).php
   script: wordpress/wp-\1.php
