@@ -47,7 +47,8 @@ handlers:
   login: admin
 
 # マルチサイトブログ対応
-- url: /wp-admin/network/(.+) script: wordpress/wp-admin/network/\1
+- url: /wp-admin/network/(.+)
+  script: wordpress/wp-admin/network/\1
   secure: always
   login: admin
 
