@@ -50,6 +50,9 @@
     /** The Database Collate type. Don't change this if in doubt. */
     define('DB_COLLATE', '');
 
+    // MULTISITE
+    define ('WP_ALLOW_MULTISITE', true);
+
     /**#@+
      * Authentication Unique Keys and Salts.
      *
