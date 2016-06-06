@@ -47,20 +47,20 @@ handlers:
   login: admin
 
 # マルチサイトブログ対応 start
-- url: /wp-admin/network/(.+)
-  script: wordpress/wp-admin/network/\1
-  secure: always
-  login: admin
+#- url: /wp-admin/network/(.+)
+#  script: wordpress/wp-admin/network/\1
+#  secure: always
+#  login: admin
 
-- url: /wp-admin/network/
-  script: wordpress/wp-admin/network/index.php
-  secure: always
-  login: admin
+#- url: /wp-admin/network/
+#  script: wordpress/wp-admin/network/index.php
+#  secure: always
+#  login: admin
 
-- url: /([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
-  static_files: wordpress/\2
-  upload: wordpress/([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
-  application_readable: true
+#- url: /([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
+#  static_files: wordpress/\2
+#  upload: wordpress/([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
+#  application_readable: true
 # マルチサイトブログ対応 end
 
 
