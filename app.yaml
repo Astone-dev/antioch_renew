@@ -63,6 +63,19 @@ handlers:
   application_readable: true
 # end Multisite handlers
 
+## Add additional handlers for every site you add ## start
+- url: /digest/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+  secure: always
+  login: admin
+
+- url: /digest/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+  secure: always
+  login: admin
+## ## end/ Add additional handlers for every site you add 
+
+
 
 - url: /wp-cron.php
   script: wordpress/wp-cron.php
@@ -86,3 +99,4 @@ skip_files:
 - ^(.*/)?\.bat$
 - ^(.*/)?\.sh$
 - ^(.*/)?\.md$
+- wordpress/wp-content/uploads/.*
