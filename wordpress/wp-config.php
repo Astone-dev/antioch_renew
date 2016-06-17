@@ -30,8 +30,8 @@
     } else {
         /** Local environment MySQL login info */
         define('DB_HOST', '127.0.0.1');
-        define('DB_USER', 'root');
-        define('DB_PASSWORD', 'password');
+        define('DB_USER', 'w1rdpress_user');
+        define('DB_PASSWORD', 'DppkF2lcshj_gag1s_n97X');
     }
 
     // Determine HTTP or HTTPS, then set WP_SITEURL and WP_HOME
@@ -51,7 +51,7 @@
     define('DB_COLLATE', '');
 
     // MULTISITE
-    define ('WP_ALLOW_MULTISITE', true);
+/*    define ('WP_ALLOW_MULTISITE', true);
     if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
         define('MULTISITE', true);
         define('SUBDOMAIN_INSTALL', false);
@@ -67,7 +67,7 @@
         define('SITE_ID_CURRENT_SITE', 1);
         define('BLOG_ID_CURRENT_SITE', 1); 
     }
-
+*/
     /**#@+
      * Authentication Unique Keys and Salts.
      *
