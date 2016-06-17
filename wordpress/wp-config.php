@@ -19,13 +19,13 @@
 
     // ** MySQL settings - You can get this info from your web host ** //
     /** The name of the database for WordPress */
-    define('DB_NAME', 'w0rdpress_db3');
+    define('DB_NAME', 'w0rdpress_db5');
 
     if (isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
         /** Live environment Cloud SQL login and SITE_URL info */
         /** Note that from App Engine, the password is not required, so leave it blank here */
         define('DB_HOST', ':/cloudsql/antiochwp-a:sql-inst4');
-        define('DB_USER', 'w0rdpress_user');
+        define('DB_USER', 'w1rdpress_user');
         define('DB_PASSWORD', 'DppkF2lcshj_gag1s_n97X');
     } else {
         /** Local environment MySQL login info */
