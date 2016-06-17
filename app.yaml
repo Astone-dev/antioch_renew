@@ -23,6 +23,19 @@ handlers:
   application_readable: true
 # end Multisite handlers
 
+## Add additional handlers for every site you add ## start
+- url: /digest/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+  secure: always
+  login: admin
+
+- url: /digest/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+  secure: always
+  login: required
+## ## end/ Add additional handlers for every site you add 
+
+
 - url: /(.*\.(htm|html|css|js))$
   static_files: wordpress/\1
   upload: wordpress/.*\.(htm|html|css|js)$
@@ -62,26 +75,12 @@ handlers:
 - url: /(.+)?/?
   script: wordpress/index.php
 
-## Add additional handlers for every site you add ## start
-#- url: /digest/wp-admin/(.+)
-#  script: wordpress/wp-admin/\1
-#  secure: always
-#  login: admin
-
-#- url: /digest/wp-admin/ 
-#  script: wordpress/wp-admin/index.php
-#  secure: always
-#  login: required
-## ## end/ Add additional handlers for every site you add 
-
-
 # スマホアプリなどの管理画面アクセス
 - url: /xmlrpc.php
 # script: wordpress/xmlrpc.php
 # redirect4dos.html 経由でリダイレクトさせてアクセス不許可
   upload: redirect4dos.html
   static_files: redirect4dos.html
-
 
 skip_files:
 - ^(.*/)?\.zip$
