@@ -51,8 +51,8 @@
     define('DB_COLLATE', '');
 
     // MULTISITE
-/*    define ('WP_ALLOW_MULTISITE', true);
-    if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
+    define ('WP_ALLOW_MULTISITE', true);
+/*    if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
         define('MULTISITE', true);
         define('SUBDOMAIN_INSTALL', false);
         define('DOMAIN_CURRENT_SITE', 'tv.antioch.jp');
