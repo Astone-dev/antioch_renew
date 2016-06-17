@@ -10,12 +10,12 @@ handlers:
 - url: /wp-admin/network/(.+)
   script: wordpress/wp-admin/network/\1
   login: required
-  secure: always
+#  secure: always
 
 - url: /wp-admin/network/
   script: wordpress/wp-admin/network/index.php
   login: required
-  secure: always
+#  secure: always
 
 - url: /([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
   static_files: wordpress/\2
@@ -26,12 +26,12 @@ handlers:
 ## Add additional handlers for every site you add ## start
 - url: /digest/wp-admin/(.+)
   script: wordpress/wp-admin/\1
-  secure: always
+#  secure: always
   login: admin
 
 - url: /digest/wp-admin/ 
   script: wordpress/wp-admin/index.php
-  secure: always
+#  secure: always
   login: required
 ## ## end/ Add additional handlers for every site you add 
 
@@ -53,17 +53,17 @@ handlers:
 - url: /wp-admin/(.+)
   script: wordpress/wp-admin/\1
   login: required
-  secure: always
+#  secure: always
 
 - url: /wp-admin/
   script: wordpress/wp-admin/index.php
   login: required
-  secure: always
+#  secure: always
 
 - url: /wp-login.php
   script: wordpress/wp-login.php
   login: required
-  secure: always
+#  secure: always
 
 - url: /wp-cron.php
   script: wordpress/wp-cron.php
