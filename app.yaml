@@ -5,63 +5,62 @@ api_version: 0.77.2
 threadsafe: true
 
 handlers:
-# Google 認証（一時使用）
-- url: /googlef107807b8271d221.html
-  upload: googlef107807b8271d221.html
-  static_files: googlef107807b8271d221.html
-  application_readable: true
-
-- url: /(.*\.(htm|html|css|js))$
-  static_files: wordpress/\1
-  upload: wordpress/.*\.(htm|html|css|js)$
-  application_readable: true
-
-- url: /wp-content/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
-  static_files: wordpress/wp-content/\1
-  upload: wordpress/wp-content/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
-  application_readable: true
-
-- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
-  static_files: wordpress/\1
-  upload: wordpress/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
-  application_readable: true
-
-- url: /wp-includes/images/media/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
-  static_files: wordpress/wp-includes/images/media/\1
-  upload: wordpress/wp-includes/images/media/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
-  application_readable: true
-
-- url: /wp-admin/(.+)
-  script: wordpress/wp-admin/\1
-  secure: always
-  login: admin
-
-- url: /wp-admin/
-  script: wordpress/wp-admin/index.php
-  secure: always
-  login: admin
-
-- url: /wp-login.php
-  script: wordpress/wp-login.php
-  secure: always
-  login: admin
 
 # begin Multisite handlers
 - url: /wp-admin/network/(.+)
   script: wordpress/wp-admin/network/\1
+  login: required
   secure: always
-  login: admin
-  
+
 - url: /wp-admin/network/
   script: wordpress/wp-admin/network/index.php
+  login: required
   secure: always
-  login: admin
 
 - url: /([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
   static_files: wordpress/\2
   upload: wordpress/([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*\.(htm.*$|html.*$|css.*$|js.*$|ico.*$|jpg.*$|png.*$|gif.*$))
   application_readable: true
 # end Multisite handlers
+
+- url: /(.*\.(htm|html|css|js))$
+  static_files: wordpress/\1
+  upload: wordpress/.*\.(htm|html|css|js)$
+  application_readable: true
+
+- url: /wp-content/(.*\.(ico|jpg|png|gif))$
+  static_files: wordpress/wp-content/\1
+  upload: wordpress/wp-content/.*\.(ico|jpg|png|gif)$
+  application_readable: true
+
+- url: /(.*\.(ico|jpg|png|gif|svg))$
+  static_files: wordpress/\1
+  upload: wordpress/.*\.(ico|jpg|png|gif|svg)$
+
+- url: /wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+  login: required
+  secure: always
+
+- url: /wp-admin/
+  script: wordpress/wp-admin/index.php
+  login: required
+  secure: always
+
+- url: /wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+  secure: always
+
+- url: /wp-cron.php
+  script: wordpress/wp-cron.php
+  login: admin
+
+- url: /wp-(.+).php
+  script: wordpress/wp-\1.php
+
+- url: /(.+)?/?
+  script: wordpress/index.php
 
 ## Add additional handlers for every site you add ## start
 - url: /digest/wp-admin/(.+)
@@ -72,14 +71,9 @@ handlers:
 - url: /digest/wp-admin/ 
   script: wordpress/wp-admin/index.php
   secure: always
-  login: admin
+  login: required
 ## ## end/ Add additional handlers for every site you add 
 
-
-
-- url: /wp-cron.php
-  script: wordpress/wp-cron.php
-  login: admin
 
 # スマホアプリなどの管理画面アクセス
 - url: /xmlrpc.php
@@ -88,11 +82,6 @@ handlers:
   upload: redirect4dos.html
   static_files: redirect4dos.html
 
-- url: /wp-(.+).php
-  script: wordpress/wp-\1.php
-
-- url: /(.+)?/?
-  script: wordpress/index.php
 
 skip_files:
 - ^(.*/)?\.zip$
