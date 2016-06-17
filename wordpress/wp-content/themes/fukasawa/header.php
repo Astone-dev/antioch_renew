@@ -120,7 +120,7 @@ pageTracker._trackPageview();
 			 
 			 <div class="credits">
 			
-                          <p>聖書 新改訳 &copy; 1970,1978,2003 新日本聖書刊行会</p> 
+                          <p>&copy; The Lord's Cross Christian Center Tokyo Antioch church</p> 
 			 	<p>&copy; <?php echo date("Y") ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>.</p>
 			 	
 			 </div>
