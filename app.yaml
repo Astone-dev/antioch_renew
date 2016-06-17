@@ -63,15 +63,15 @@ handlers:
   script: wordpress/index.php
 
 ## Add additional handlers for every site you add ## start
-- url: /digest/wp-admin/(.+)
-  script: wordpress/wp-admin/\1
-  secure: always
-  login: admin
+#- url: /digest/wp-admin/(.+)
+#  script: wordpress/wp-admin/\1
+#  secure: always
+#  login: admin
 
-- url: /digest/wp-admin/ 
-  script: wordpress/wp-admin/index.php
-  secure: always
-  login: required
+#- url: /digest/wp-admin/ 
+#  script: wordpress/wp-admin/index.php
+#  secure: always
+#  login: required
 ## ## end/ Add additional handlers for every site you add 
 
 
