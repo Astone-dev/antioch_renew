@@ -1,5 +1,14 @@
 <?php
 
+function func_init() {
+    // Disalbe SSL for Google App Engine
+    // This will enable by "Google App Engine" plugin.
+    add_filter( 'secure_auth_redirect', '__return_false' );
+    force_ssl_admin( false );
+}
+add_action('init', 'func_init');
+
+
 // Theme setup
 add_action( 'after_setup_theme', 'fukasawa_setup' );
 
