@@ -35,7 +35,7 @@ handlers:
   login: required
   
 - url: /digest/wp-login.php
-  script: wordpress/digest/wp-login.php
+  script: wordpress/wp-login.php
   login: required
 #  secure: always
   
