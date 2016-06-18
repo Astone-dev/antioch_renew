@@ -27,12 +27,18 @@ handlers:
 - url: /digest/wp-admin/(.+)
   script: wordpress/wp-admin/\1
 #  secure: always
-  login: admin
+  login: required
 
 - url: /digest/wp-admin/ 
   script: wordpress/wp-admin/index.php
 #  secure: always
   login: required
+  
+- url: /digest/wp-login.php
+  script: wordpress/digest/wp-login.php
+  login: required
+#  secure: always
+  
 ## ## end/ Add additional handlers for every site you add 
 
 
