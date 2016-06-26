@@ -1,5 +1,5 @@
 application: antiochwp-a
-version: wpproject
+version: wpproject-dev
 runtime: php55
 api_version: 0.77.2
 threadsafe: true
