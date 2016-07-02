@@ -8,7 +8,7 @@ handlers:
 
 # TEST Google Cloud Storage
 - url: /movie/1605hakuba.mp4
-  static_files: 1605hakuba.mp4
+  static_files: http://antioch_archives.storage.googleapis.com/1605hakuba.mp4
   upload: http://antioch_archives.storage.googleapis.com/1605hakuba.mp4
 
 
