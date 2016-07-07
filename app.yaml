@@ -6,11 +6,6 @@ threadsafe: true
 
 handlers:
 
-# TEST Google Cloud Storage
-- url: /movie/1605hakuba.mp4
-  static_files: http://antioch_archives.storage.googleapis.com/1605hakuba.mp4
-  upload: http://antioch_archives.storage.googleapis.com/1605hakuba.mp4
-
 
 
 # begin Multisite handlers
@@ -42,6 +37,22 @@ handlers:
   login: required
   
 - url: /digest/wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+#  secure: always
+  
+#add 2016patomos (2016.7.7)
+- url: /2016patmos/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+#  secure: always
+  login: required
+
+- url: /2016patmos/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+#  secure: always
+  login: required
+  
+- url: /2016patmos/wp-login.php
   script: wordpress/wp-login.php
   login: required
 #  secure: always
