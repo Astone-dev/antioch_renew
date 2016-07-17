@@ -135,4 +135,7 @@ define('NONCE_SALT',       ',lNm&xS}GdjHcgEPZa;YG}n?)d<hkgWz}i8|XkoI!>!WR!8zKose
     /** Sets up WordPress vars and included files. */
     require_once(ABSPATH . 'wp-settings.php');
 
-
+$batcache = [
+    'seconds' => 0,
+    'max_age' => 60 * 30,  // 30 minutes.
+];
