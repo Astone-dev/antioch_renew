@@ -136,6 +136,6 @@ define('NONCE_SALT',       ',lNm&xS}GdjHcgEPZa;YG}n?)d<hkgWz}i8|XkoI!>!WR!8zKose
     require_once(ABSPATH . 'wp-settings.php');
 
 $batcache = [
-    'seconds' => 0,
+    'seconds' => 3,
     'max_age' => 60 * 30,  // 30 minutes.
 ];
