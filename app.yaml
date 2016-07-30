@@ -1,7 +1,7 @@
 application: antiochwp-a
 version: wpproject
 runtime: php55
-api_version: 0.8.1
+api_version: 0.8.2
 instance_class: F2
 threadsafe: true
 
@@ -58,7 +58,24 @@ handlers:
   script: wordpress/wp-login.php
   login: required
 #  secure: always
+
+#add music (2016.7.30)
+- url: /music/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+#  secure: always
+  login: required
+
+- url: /music/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+#  secure: always
+  login: required
   
+- url: /music/wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+#  secure: always
+
+
 ## ## end/ Add additional handlers for every site you add 
 
 
