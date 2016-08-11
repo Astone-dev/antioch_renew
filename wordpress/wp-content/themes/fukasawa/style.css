@@ -91,7 +91,8 @@ body {
 	border: none;
 	color: #333;
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 18px;
+/*      font-size: 18px;   */
+        font-size: 14px;  /* obata-fix */
 	background: #f2f2f2;
 }
 
@@ -908,7 +909,8 @@ body a,
 
 
 .post.single .post-title {
-	font-size: 2em;
+ /* obata-fix font-size: 2em; */
+    font-size: 1.4em;
 	line-height: 120%;
 	font-weight: 700;
 	margin-bottom: 40px;
