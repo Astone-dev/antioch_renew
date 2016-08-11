@@ -9,7 +9,6 @@ threadsafe: true
 handlers:
 
 
-
 # begin Multisite handlers
 - url: /wp-admin/network/(.+)
   script: wordpress/wp-admin/network/\1
