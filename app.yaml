@@ -42,7 +42,7 @@ handlers:
   login: required
 #  secure: always
   
-#add 2016patomos (2016.7.7)
+#add 2016patomos (2016.7.7) ---------------------
 - url: /2016patmos/wp-admin/(.+)
   script: wordpress/wp-admin/\1
 #  secure: always
@@ -58,7 +58,7 @@ handlers:
   login: required
 #  secure: always
 
-#add music (2016.7.30)
+#add music (2016.7.30) -------------------------
 - url: /music/wp-admin/(.+)
   script: wordpress/wp-admin/\1
 #  secure: always
@@ -70,6 +70,22 @@ handlers:
   login: required
   
 - url: /music/wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+#  secure: always
+
+#add testimony (2016.8.13) ---------------------
+- url: /testimony/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+#  secure: always
+  login: required
+
+- url: /testimony/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+#  secure: always
+  login: required
+  
+- url: /testimony/wp-login.php
   script: wordpress/wp-login.php
   login: required
 #  secure: always
