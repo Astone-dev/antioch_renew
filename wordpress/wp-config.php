@@ -25,13 +25,13 @@
         /** Live environment Cloud SQL login and SITE_URL info */
         /** Note that from App Engine, the password is not required, so leave it blank here */
         define('DB_HOST', ':/cloudsql/antiochwp-a:us-central1:sql2-inst4');
-        define('DB_USER', 'w1rdpress_user');
-        define('DB_PASSWORD', 'DppkF2lcshj_gag1s_n97X');
+        define('DB_USER', 'root');
+        define('DB_PASSWORD', '90A7vSR5a18aS_WWr2esaH6ss_sBcX7wkpGT');
     } else {
         /** Local environment MySQL login info */
         define('DB_HOST', '127.0.0.1');
-        define('DB_USER', 'w1rdpress_user');
-        define('DB_PASSWORD', 'DppkF2lcshj_gag1s_n97X');
+        define('DB_USER', 'root');
+        define('DB_PASSWORD', '90A7vSR5a18aS_WWr2esaH6ss_sBcX7wkpGT');
     }
 
     // Determine HTTP or HTTPS, then set WP_SITEURL and WP_HOME
