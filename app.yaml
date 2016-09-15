@@ -90,6 +90,21 @@ handlers:
   login: required
 #  secure: always
 
+#add testimony (2016.9.15) ---------------------
+- url: /201609cambodia/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+#  secure: always
+  login: required
+
+- url: /201609cambodia/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+#  secure: always
+  login: required
+  
+- url: /201609cambodia/wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+#  secure: always
 
 ## ## end/ Add additional handlers for every site you add 
 
