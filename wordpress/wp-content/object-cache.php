@@ -1,6 +1,6 @@
 <?php
 
-/*
+/* obata-add file
 Plugin Name: Memcached (FORKED )
 Description: Forked Memcached backend for the WP Object Cache.
 Version: 2.0.2.001
