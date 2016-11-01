@@ -1,7 +1,7 @@
 application: antiochwp-a
 version: wpproject
 runtime: php55
-api_version: 0.8.3
+api_version: 0.8.5
 instance_class: F4
 threadsafe: true
 
@@ -90,7 +90,7 @@ handlers:
   login: required
 #  secure: always
 
-#add testimony (2016.9.15) ---------------------
+#add 201609cambodia (2016.9.15) ---------------------
 - url: /201609cambodia/wp-admin/(.+)
   script: wordpress/wp-admin/\1
 #  secure: always
@@ -106,8 +106,39 @@ handlers:
   login: required
 #  secure: always
 
-## ## end/ Add additional handlers for every site you add 
+#add 2016israel (2016.11.1) ---------------------
+- url: /2016israel/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+#  secure: always
+  login: required
 
+- url: /2016israel/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+#  secure: always
+  login: required
+  
+- url: /2016israel/wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+#  secure: always
+
+#add 2016israel360 (2016.11.1) ---------------------
+- url: /2016israel360/wp-admin/(.+)
+  script: wordpress/wp-admin/\1
+#  secure: always
+  login: required
+
+- url: /2016israel360/wp-admin/ 
+  script: wordpress/wp-admin/index.php
+#  secure: always
+  login: required
+  
+- url: /2016israel360/wp-login.php
+  script: wordpress/wp-login.php
+  login: required
+#  secure: always
+
+## ## end/ Add additional handlers for every site you add 
 
 - url: /(.*\.(htm|html|css|js))$
   static_files: wordpress/\1
