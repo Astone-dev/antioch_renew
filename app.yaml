@@ -2,7 +2,7 @@ application: antiochwp-a
 version: wpproject
 runtime: php55
 api_version: 0.8.6
-instance_class: F2
+instance_class: F4
 threadsafe: true
 
 
